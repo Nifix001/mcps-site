@@ -2,6 +2,9 @@
 import { Bookmark, Menu, Search, X } from 'lucide-react';
 import Link from 'next/link'
 import React, { useState } from 'react'
+import logo from "@/public/mcps_logo.jpeg"
+import Image from 'next/image';
+
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,8 +13,9 @@ const Header = () => {
     <header className="fixed top-0 w-full bg-black text-white z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         
-        <a href="/" className="text-2xl font-bold">
-          MCPS Logo
+        <a href="/" className="flex items-center justify-center text-xl gap-3 font-bold">
+          <Image src={logo} alt='MCPS logo' width={40} height={40} />
+          MCPS
         </a>
 
         

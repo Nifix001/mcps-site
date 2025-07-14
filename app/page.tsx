@@ -2,6 +2,9 @@
 import Header from "@/components/Header";
 import { ChevronRight, Pause, PlayIcon } from "lucide-react";
 import { useEffect, useState } from "react";
+import back1 from "@/public/homepage-ceremony_lg.jpg"
+import back2 from "@/public/homepage-soldier-helicopter-sm-v2.jpg"
+import back3 from "@/public/homepage-planning_sm.jpg"
 
 export default function Home() {
    const [currentSlide, setCurrentSlide] = useState(0);
@@ -13,7 +16,7 @@ export default function Home() {
       title: "BE ALL YOU CAN BE.",
       subtitle: "Discover your potential and unlock endless possibilities.",
       buttonText: "TAKE THE FIRST STEP",
-      bgImage: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=1920&h=1080&fit=crop",
+      bgImage: back1.src,
       bgColor: "from-blue-900/70 to-orange-900/70"
     },
     {
@@ -21,7 +24,7 @@ export default function Home() {
       title: "BE A DEFENDER. SOLVER. HEALER. PLANNER. CONNECTOR.",
       subtitle: "SOLDIER.",
       buttonText: "EXPLORE CAREERS",
-      bgImage: "https://images.unsplash.com/photo-1488034976201-ffbaa99cbf5c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHN0cmVldHxlbnwwfHwwfHx8MA%3D%3D",
+      bgImage: back2.src,
       bgColor: "from-black/60 to-gray-900/80"
     },
     {
@@ -29,7 +32,7 @@ export default function Home() {
       title: "YOUR FUTURE STARTS HERE.",
       subtitle: "Take this short quiz to narrow down your choices and see jobs you might be interested in. We're ready when you are.",
       buttonText: "START THE QUIZ",
-      bgImage: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=1920&h=1080&fit=crop",
+      bgImage: back3.src,
       bgColor: "from-orange-900/60 to-black/80"
     }
   ];
