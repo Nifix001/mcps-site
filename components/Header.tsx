@@ -1,9 +1,10 @@
 "use client"
 import { Bookmark, Menu, Search, X } from 'lucide-react';
-import Link from 'next/link'
+// import Link from 'next/link'
 import React, { useState } from 'react'
 import logo from "@/public/mcps_logo.jpeg"
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const Header = () => {
@@ -13,18 +14,18 @@ const Header = () => {
     <header className="fixed top-0 w-full bg-black text-white z-50">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         
-        <a href="/" className="flex items-center justify-center text-xl gap-3 font-bold">
+        <Link href="/" className="flex items-center justify-center text-xl gap-3 font-bold">
           <Image src={logo} alt='MCPS logo' width={40} height={40} />
           MCPS
-        </a>
+        </Link>
 
         
         <nav className="hidden md:flex space-x-6 ">
-          <a href="/" className=" hover:text-yellow-400 transition-colors">EXPLORE</a>
-          <a href="/" className="hover:text-yellow-400 transition-colors">ABOUT</a>
-          <a href="/" className="hover:text-yellow-400 transition-colors">CAREERS</a>
-          <a href="/" className="hover:text-yellow-400 transition-colors">CONTACT</a>
-          <a href="/" className="hover:text-yellow-400 transition-colors">HOW TO JOIN</a>
+          <Link href="/" className=" hover:text-yellow-400 transition-colors">EXPLORE</Link>
+          <Link href="/" className="hover:text-yellow-400 transition-colors">ABOUT</Link>
+          <Link href="/" className="hover:text-yellow-400 transition-colors">CAREERS</Link>
+          <Link href="/" className="hover:text-yellow-400 transition-colors">CONTACT</Link>
+          <Link href="/" className="hover:text-yellow-400 transition-colors">HOW TO JOIN</Link>
         </nav>
 
         <div className='flex items-center gap-4'>
