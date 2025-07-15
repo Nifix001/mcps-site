@@ -1,6 +1,7 @@
 "use client"
 import Header from "@/components/Header";
 import { ChevronRight, Pause, PlayIcon } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -12,6 +13,15 @@ export default function Home() {
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+  ];
+
+  const benefits = [
+    { icon: "🎓", title: "EDUCATION & TRAINING", color: "border-yellow-400" },
+    { icon: "🏥", title: "HEALTH CARE", color: "border-yellow-400" },
+    { icon: "💰", title: "MONEY & PAY", color: "border-yellow-400" },
+    { icon: "🏠", title: "HOME LOANS", color: "border-yellow-400" },
+    { icon: "👨‍👩‍👧‍👦", title: "FAMILY BENEFITS", color: "border-yellow-400" },
+    { icon: "🛡️", title: "VETERAN BENEFITS", color: "border-yellow-400" }
   ];
 
   // Select a random video
@@ -123,6 +133,72 @@ export default function Home() {
           />
         )}
       </div>
+
+      {/* Career Match Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-yellow-400 font-medium mb-4">ARMY CAREER MATCH</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                YOUR FUTURE STARTS HERE.
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Take this short quiz to narrow down your choices and see jobs you might be interested in. We&apos;re ready when you are.
+              </p>
+              <div className="space-y-4">
+                <button className="flex items-center w-full md:w-auto px-8 py-4 bg-transparent border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 font-bold">
+                  Start the Quiz
+                  <ChevronRight className="ml-2 w-5 h-5" />
+                </button>
+                <button className="flex items-center w-full md:w-auto px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 font-bold">
+                  All Jobs
+                  <ChevronRight className="ml-2 w-5 h-5" />
+                </button>
+              </div>
+            </div>
+            <div className="relative">
+              <Image
+                src="https://images.unsplash.com/photo-1598966835412-6de6f92c243d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHN0cmVldHxlbnwwfHwwfHx8MA%3D%3D"
+                alt="img"
+                className="rounded-lg h-screen shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                FEEL SECURE FROM DAY ONE.
+              </h2>
+              <button className="flex items-center px-8 py-4 bg-transparent border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 font-bold">
+                All Jobs
+                <ChevronRight className="ml-2 w-5 h-5" />
+              </button>
+            </div>
+            <div className="space-y-4">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className={`flex items-center justify-between p-4 border-2 ${benefit.color} hover:bg-yellow-400 hover:text-black transition-all duration-300 cursor-pointer group`}
+                >
+                  <div className="flex items-center space-x-4">
+                    <span className="text-2xl">{benefit.icon}</span>
+                    <span className="font-bold">{benefit.title}</span>
+                  </div>
+                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
