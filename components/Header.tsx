@@ -21,26 +21,26 @@ const Header = () => {
 
         
         <nav className="hidden md:flex space-x-6 ">
-          <Link href="/" className=" hover:text-yellow-400 transition-colors">EXPLORE</Link>
-          <Link href="/" className="hover:text-yellow-400 transition-colors">ABOUT</Link>
-          <Link href="/" className="hover:text-yellow-400 transition-colors">CAREERS</Link>
-          <Link href="/" className="hover:text-yellow-400 transition-colors">CONTACT</Link>
-          <Link href="/" className="hover:text-yellow-400 transition-colors">HOW TO JOIN</Link>
+          <Link href="/" className=" transition-colors relative hover:after:content-[''] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:right-0 hover:after:h-1 hover:after:bg-[#FFD700]">EXPLORE</Link>
+          <Link href="/" className=" transition-colors relative hover:after:content-[''] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:right-0 hover:after:h-1 hover:after:bg-[#FFD700]">ABOUT</Link>
+          <Link href="/" className=" transition-colors relative hover:after:content-[''] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:right-0 hover:after:h-1 hover:after:bg-[#FFD700]">CAREERS</Link>
+          <Link href="/" className=" transition-colors relative hover:after:content-[''] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:right-0 hover:after:h-1 hover:after:bg-[#FFD700]">CONTACT</Link>
+          <Link href="/" className=" transition-colors relative hover:after:content-[''] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:right-0 hover:after:h-1 hover:after:bg-[#FFD700]">HOW TO JOIN</Link>
         </nav>
 
         <div className='flex items-center gap-4'>
           {/* Icons */}
           <div className="flex items-center space-x-4">
-            <Bookmark className="w-6 h-6 hover:text-yellow-400 cursor-pointer transition-colors" />
-            <Search className="w-6 h-6 hover:text-yellow-400 cursor-pointer transition-colors" />
+            <Bookmark className="w-6 h-6 hover:text-[#FFD700] cursor-pointer transition-colors" />
+            <Search className="w-6 h-6 hover:text-[#FFD700] cursor-pointer transition-colors" />
           </div>
 
           {/* Buttons - Hidden on mobile */}
           <div className='hidden md:flex gap-2'>
-            <button className="px-4 py-2 rounded hover:bg-opacity-80 border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all">
+            <button className="px-4 py-2 rounded hover:bg-opacity-80 border border-yellow-400 text-[#FFD700] hover:bg-yellow-400 hover:text-black transition-all">
               Join Now
             </button>
-            <button className="px-4 py-2 rounded hover:bg-opacity-80 bg-yellow-400 text-black hover:bg-yellow-500 transition-all">
+            <button className="px-4 py-2 rounded hover:bg-opacity-80 bg-[#FFD700] text-black hover:bg-yellow-500 transition-all">
               Apply Now
             </button>
           </div>
