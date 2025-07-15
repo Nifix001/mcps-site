@@ -162,6 +162,8 @@ export default function Home() {
                 src="https://images.unsplash.com/photo-1598966835412-6de6f92c243d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHN0cmVldHxlbnwwfHwwfHx8MA%3D%3D"
                 alt="img"
                 className="rounded-lg h-screen shadow-2xl"
+                width={500}
+                height={200}
               />
             </div>
           </div>
